@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/fractions_math/__init__.py
+src/fractions_math/example.py
+src/fractions_pkg_jmasonlee.egg-info/PKG-INFO
+src/fractions_pkg_jmasonlee.egg-info/SOURCES.txt
+src/fractions_pkg_jmasonlee.egg-info/dependency_links.txt
+src/fractions_pkg_jmasonlee.egg-info/top_level.txt
