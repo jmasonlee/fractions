@@ -28,6 +28,6 @@ class Test(TestCase):
     def test_result_is_a_fraction_when_inputs_do_not_make_a_whole(self):
         self.assertEqual(Fraction(7, 9), add.add(Fraction(4, 9), Fraction(3, 9)))
 
-    def test_LCD_is_used(self):
+    def test_two_numbers_make_a_whole(self):
         self.assertEqual(Fraction(1), add.add(Fraction(1, 3), Fraction(2, 3)))
 
