@@ -14,4 +14,6 @@ class Fraction:
 
 
 def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
-    return Fraction(fraction1.numerator + fraction2.numerator, fraction1.denominator)
+    numerator = fraction1.numerator + fraction2.numerator
+    denominator = fraction1.denominator
+    return Fraction(numerator, denominator)
