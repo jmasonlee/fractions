@@ -14,13 +14,11 @@ class Fraction:
 
 
 def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
-    if fraction2.denominator % fraction1.denominator == 0:
-        fraction1.numerator = fraction1.numerator * (fraction2.denominator / fraction1.denominator)
-        fraction1.denominator = fraction2.denominator
-
     numerator = fraction1.numerator + fraction2.numerator
-    if numerator % fraction2.denominator == 0:
-        numerator = numerator / fraction2.denominator
 
-    fraction = Fraction(numerator, fraction2.denominator)
+    if numerator % fraction2.denominator == 0:
+        numerator = fraction1.numerator + fraction2.numerator
+        numerator = numerator // fraction2.denominator
+
+    fraction = Fraction(numerator, 1)
     return fraction
