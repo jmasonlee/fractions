@@ -22,4 +22,5 @@ def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
     if numerator % fraction2.denominator == 0:
         numerator = numerator / fraction2.denominator
 
-    return Fraction(numerator, fraction2.denominator)
+    fraction = Fraction(numerator, fraction2.denominator)
+    return fraction
