@@ -16,18 +16,14 @@ class Fraction:
 def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
     numerator = 0
     denominator = 0
-    if fraction1.denominator < fraction2.denominator:
-        lcm = fraction2.denominator/fraction1.denominator
-        numerator = (fraction1.numerator * lcm) + fraction2.numerator
-        denominator = fraction2.denominator
-    if fraction1.denominator == fraction2.denominator:
-        numerator = fraction1.numerator + fraction2.numerator
-        denominator = fraction2.denominator
+    lcm = fraction2.denominator / fraction1.denominator
+    numerator = (fraction1.numerator * lcm) + fraction2.numerator
+    denominator = fraction2.denominator
 
-        if numerator % fraction2.denominator == 0:
-            numerator = fraction1.numerator + fraction2.numerator
-            numerator = numerator // fraction2.denominator
-            denominator = 1
+    if numerator % fraction2.denominator == 0:
+        numerator = fraction1.numerator + fraction2.numerator
+        numerator = numerator // fraction2.denominator
+        denominator = 1
 
     fraction = Fraction(numerator, denominator)
     return fraction
