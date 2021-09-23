@@ -14,7 +14,7 @@ class Fraction:
 
 
 def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
-    lcm = calculate_lcm(fraction1, fraction2)
+    lcm = calculate_lcm(fraction1, fraction2, fraction1.denominator, fraction2.denominator)
     numerator = (fraction1.numerator * lcm) + fraction2.numerator
     denominator = fraction2.denominator
 
@@ -27,5 +27,5 @@ def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
     return fraction
 
 
-def calculate_lcm(fraction1, fraction2):
+def calculate_lcm(fraction1, fraction2, first_number, second_number):
     return fraction2.denominator / fraction1.denominator
