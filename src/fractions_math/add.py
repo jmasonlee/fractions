@@ -29,4 +29,4 @@ def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
 
 def calculate_lcm(fraction1, fraction2, first_number, second_number):
     lcm_bak = fraction2.denominator / fraction1.denominator
-    return second_number / first_number if second_number / first_number == lcm_bak else None
+    return second_number / first_number
