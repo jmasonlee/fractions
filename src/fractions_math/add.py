@@ -1,3 +1,6 @@
+import math
+
+
 class Fraction:
     def __init__(self, numerator, denominator=1):
         self.numerator = numerator
@@ -18,13 +21,14 @@ def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
     numerator = (fraction1.numerator * factor1) + fraction2.numerator
     denominator = fraction2.denominator
 
-    if numerator % denominator == 0:
-        numerator = numerator // denominator
-        denominator = 1
+    gcd = math.gcd(int(numerator), int(denominator))
+    if denominator != gcd:
+        numerator = numerator // gcd
+        denominator = denominator // gcd
 
     fraction = Fraction(numerator, denominator)
     return fraction
 
 
-def calculate_factor(first_number, second_number):
+def calculate_factor(first_number, second_number) -> int:
     return second_number / first_number
