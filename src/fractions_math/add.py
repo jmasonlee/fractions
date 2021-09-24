@@ -29,11 +29,16 @@ def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
 def reduce(fraction):
     og_denominator = fraction.denominator
     og_numerator = fraction.numerator
+    new_denominator, new_numerator = reduce_numerator_and_denominator(og_numerator, og_denominator)
+    fraction = Fraction(new_numerator, new_denominator)
+    return fraction
+
+
+def reduce_numerator_and_denominator(og_numerator, og_denominator):
     gcd = math.gcd(int(og_numerator), int(og_denominator))
     new_numerator = og_numerator // gcd
     new_denominator = og_denominator // gcd
-    fraction = Fraction(new_numerator, new_denominator)
-    return fraction
+    return new_denominator, new_numerator
 
 
 def calculate_factor(first_number, second_number) -> int:
