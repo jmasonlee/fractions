@@ -14,8 +14,8 @@ class Fraction:
 
 
 def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
-    factor = calculate_factor(fraction1.denominator, fraction2.denominator)
-    numerator = (fraction1.numerator * factor) + fraction2.numerator
+    factor1 = calculate_factor(fraction1.denominator, fraction2.denominator)
+    numerator = (fraction1.numerator * factor1) + fraction2.numerator
     denominator = fraction2.denominator
 
     if numerator % fraction2.denominator == 0:
