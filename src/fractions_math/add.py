@@ -27,12 +27,12 @@ def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
 
 
 def reduce(fraction):
-    denominator = fraction.denominator
-    numerator = fraction.numerator
-    gcd = math.gcd(int(numerator), int(denominator))
-    numerator = numerator // gcd
-    denominator = denominator // gcd
-    fraction = Fraction(numerator, denominator)
+    og_denominator = fraction.denominator
+    og_numerator = fraction.numerator
+    gcd = math.gcd(int(og_numerator), int(og_denominator))
+    new_numerator = og_numerator // gcd
+    new_denominator = og_denominator // gcd
+    fraction = Fraction(new_numerator, new_denominator)
     return fraction
 
 
