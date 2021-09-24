@@ -21,8 +21,8 @@ def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
     numerator = (fraction1.numerator * factor1) + fraction2.numerator
     denominator = fraction2.denominator
 
-    gcd = math.gcd(int(numerator), int(denominator))
-    if denominator != gcd:
+    gcd = numerator if numerator == denominator else math.gcd(int(numerator), int(denominator))
+    if denominator != gcd or numerator == denominator:
         numerator = numerator // gcd
         denominator = denominator // gcd
 
