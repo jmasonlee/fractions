@@ -30,12 +30,8 @@ def reduce(fraction):
     denominator = fraction.denominator
     numerator = fraction.numerator
     gcd = math.gcd(int(numerator), int(denominator))
-    if denominator != gcd or numerator == denominator:
-        numerator = numerator // gcd
-        denominator = denominator // gcd
-    else:
-        numerator = numerator // gcd
-        denominator = denominator // gcd
+    numerator = numerator // gcd
+    denominator = denominator // gcd
     fraction = Fraction(numerator, denominator)
     return fraction
 
