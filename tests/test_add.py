@@ -36,3 +36,7 @@ class Test(TestCase):
 
     def test_reduce_result(self):
         self.assertEqual(Fraction(1, 2), add.add(Fraction(1, 6), Fraction(2, 6)))
+
+    @unittest.skip("Waiting to finish refactoring/testing reduce")
+    def test_different_denominators_without_reducing_result(self):
+        self.assertEqual(Fraction(5, 6), add.add(Fraction(1, 2), Fraction(1, 3)))
