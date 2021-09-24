@@ -31,5 +31,8 @@ class Test(TestCase):
     def test_two_numbers_make_a_whole(self):
         self.assertEqual(Fraction(1), add.add(Fraction(1, 3), Fraction(2, 3)))
 
-    def test_one_denominator_is_a_multiple_of_the_other(self):
+    def test_right_denominator_is_a_multiple_of_the_left(self):
         self.assertEqual(Fraction(3, 4), add.add(Fraction(1, 2), Fraction(1, 4)))
+
+    def test_reduce_result(self):
+        self.assertEqual(Fraction(1, 2), add.add(Fraction(1, 6), Fraction(2, 6)))
