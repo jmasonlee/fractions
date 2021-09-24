@@ -3,6 +3,7 @@ import math
 
 class Fraction:
     def __init__(self, numerator, denominator=1):
+        reduced_numerator, reduced_denominator = reduce_numerator_and_denominator(numerator, denominator)
         self.numerator = numerator
         self.denominator = denominator
 
