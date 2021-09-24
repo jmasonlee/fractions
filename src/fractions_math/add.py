@@ -33,6 +33,9 @@ def reduce(fraction):
     if denominator != gcd or numerator == denominator:
         numerator = numerator // gcd
         denominator = denominator // gcd
+    else:
+        numerator = numerator // gcd
+        denominator = denominator // gcd
     fraction = Fraction(numerator, denominator)
     return fraction
 
