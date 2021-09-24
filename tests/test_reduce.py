@@ -14,12 +14,12 @@ class Test(unittest.TestCase):
         self.assertEquals(Fraction(3), reduce(Fraction(6, 2)))
 
     def test_fraction_reduces_to_itself(self):
-        self.assertEquals(Fraction(1/5), reduce(Fraction(1/5)))
+        self.assertEquals(Fraction(1, 5), reduce(Fraction(1, 5)))
 
     def test_denominator_is_multiple_of_numerator(self):
-        self.assertEquals(Fraction(1/3), reduce(Fraction(5/15)))
+        self.assertEquals(Fraction(1, 3), reduce(Fraction(5, 15)))
 
     def test_numerator_and_denominator_share_a_factor(self):
-        self.assertEquals(Fraction(7/9), reduce(Fraction(21/27)))
+        self.assertEquals(Fraction(7, 9), reduce(Fraction(21, 27)))
 
 
