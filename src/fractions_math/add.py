@@ -18,9 +18,8 @@ def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
     numerator = (fraction1.numerator * factor1) + fraction2.numerator
     denominator = fraction2.denominator
 
-    if numerator % fraction2.denominator == 0:
-        numerator = fraction1.numerator + fraction2.numerator
-        numerator = numerator // fraction2.denominator
+    if numerator % denominator == 0:
+        numerator = numerator // denominator
         denominator = 1
 
     fraction = Fraction(numerator, denominator)
