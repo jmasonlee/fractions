@@ -5,6 +5,7 @@ class Fraction:
     def __init__(self, numerator, denominator=1):
         reduced_numerator, reduced_denominator = reduce_numerator_and_denominator(numerator, denominator)
         self.numerator = reduced_numerator
+        self.denominator = reduced_denominator
         self.numerator = numerator
         self.denominator = denominator
 
@@ -19,9 +20,8 @@ class Fraction:
 
 
 def add(fraction1: Fraction, fraction2: Fraction) -> Fraction:
-    factor1 = calculate_factor(fraction1.denominator, fraction2.denominator)
-    numerator = (fraction1.numerator * factor1) + fraction2.numerator
-    denominator = fraction2.denominator
+    numerator = (fraction1.numerator * fraction2.denominator) + (fraction2.numerator * fraction1.denominator)
+    denominator = fraction1.denominator * fraction2.denominator
 
     fraction = Fraction(numerator, denominator)
     fraction = reduce(fraction)
